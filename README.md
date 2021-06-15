@@ -1,5 +1,13 @@
 # hello-locust
 
+## Usage
+
+```sh
+$ locust -f locustfile.py
+```
+
+Open http://127.0.0.1:8089/ in a browser.
+
 ## Docs
 
 ### Locust
