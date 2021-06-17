@@ -13,7 +13,7 @@ locust --locustfile locustfile.py --worker > ./logs/log_worker04.txt 2>&1 &
 locust \
   --master \
   --locustfile locustfile.py \
-  --host http://www.example.com \
+  --host http://localhost:8080 \
   --users 2400 \
   --spawn-rate 400 \
   --csv ./logs/quickstart \

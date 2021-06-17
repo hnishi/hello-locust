@@ -10,11 +10,16 @@ class QuickstartUser(HttpUser):
     #wait_time = between(1, 2.5)
     wait_time = constant(1)
 
-    # The below configuration will make Locust three times more likely to pick view_items than hello_world.
+
     @task
-    def hello_world(self):
-        self.client.get("/hello")
-        #self.client.get("/world")
+    def wiremock_simple_get(self):
+        self.client.get("/api/mytest")
+
+    # The below configuration will make Locust three times more likely to pick view_items than hello_world.
+    #@task
+    #def hello_world(self):
+    #    self.client.get("/hello")
+    #    #self.client.get("/world")
 
     #@task(3)
     #def view_items(self):
@@ -23,5 +28,5 @@ class QuickstartUser(HttpUser):
     #        time.sleep(1)
 
     # method with this name will be called for each simulated user when they start.
-    def on_start(self):
-        self.client.post("/login", json={"username":"foo", "password":"bar"})
+    #def on_start(self):
+    #    self.client.post("/login", json={"username":"foo", "password":"bar"})
