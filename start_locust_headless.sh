@@ -5,14 +5,15 @@ mkdir -p ./logs
 locust \
   --headless \
   --locustfile locustfile.py \
-  --host http://www.example.com \
-  --users 600 \
-  --spawn-rate 100 \
-  --run-time 10 \
+  --host http://localhost:8080 \
+  --users 2 \
+  --spawn-rate 2 \
+  --run-time 2 \
   --csv ./logs/quickstart \
   --html ./logs/report.html \
   --loglevel INFO
 
+  #--host http://www.example.com \
   #--show-task-ratio
   #--logfile log_locust.txt
   #--csv-full-history

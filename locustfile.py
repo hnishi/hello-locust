@@ -10,10 +10,19 @@ class QuickstartUser(HttpUser):
     #wait_time = between(1, 2.5)
     wait_time = constant(1)
 
+    #@task
+    #def simple_get(self):
+    #    self.client.get("/api/mytest")
+
+    #@task
+    #def simple_post(self):
+    #    self.client.post("/api/mytest", json={"username":"foo", "password":"bar"})
 
     @task
-    def wiremock_simple_get(self):
-        self.client.get("/api/mytest")
+    def post_binary(self):
+        req_body = (7).to_bytes(2, 'big')
+        headers = {"Content-Type": "application/octet-stream"}
+        self.client.post("/api/binary", data=req_body, headers=headers)
 
     # The below configuration will make Locust three times more likely to pick view_items than hello_world.
     #@task

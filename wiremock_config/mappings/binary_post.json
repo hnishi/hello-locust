@@ -1,0 +1,15 @@
+{
+    "request": {
+        "url": "/api/binary",
+        "method": "POST",
+        "headers": {
+          "Content-Type": {
+            "equalTo": "application/octet-stream"
+          }
+        }
+    },
+    "response": {
+        "status": 200,
+        "body": "Binary was posted\n"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "request": {
+        "url": "/api/mytest",
+        "method": "POST",
+        "headers": {
+          "Content-Type": {
+            "equalTo": "application/json"
+          }
+        }
+    },
+    "response": {
+        "status": 200,
+        "body": "Updated\n"
+    }
+}
